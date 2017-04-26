@@ -1,0 +1,47 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Profil</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content style="text-align: center;">
+
+	<h3 style="font-weight: 900">{{lastName}}</h3>
+	<h3 style="font-weight: 100">{{firstName}}</h3>
+
+	<p>
+		<ion-chip>
+			<ion-icon name="timer" color={{color}}></ion-icon>
+		</ion-chip>
+	</p>
+
+	<ion-list radio-group [(ngModel)]="status">
+		<ion-list-header>
+			Mise à jour du status
+		</ion-list-header>
+		<ion-item>
+			<ion-label>Disponible</ion-label>
+			<ion-radio color="green" value=0 checked="true"></ion-radio>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>Disponible avec délai</ion-label>
+			<ion-radio color="orange" value=1></ion-radio>
+		</ion-item>
+
+		<ion-item>
+			<ion-label>Non disponible</ion-label>
+			<ion-radio color="red" value=2></ion-radio>
+		</ion-item>
+
+	</ion-list>
+
+	<button ion-button icon-right block (click)="updateStatus()">
+		Mettre à jour
+		<ion-icon name="refresh"></ion-icon>
+	</button>
+
+</ion-content>

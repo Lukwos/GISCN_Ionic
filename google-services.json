@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "607664390482",
+    "firebase_url": "https://giscn-1f664.firebaseio.com",
+    "project_id": "giscn-1f664",
+    "storage_bucket": "giscn-1f664.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607664390482:android:020cc03989fb5436",
+        "android_client_info": {
+          "package_name": "bzh.lukwos.giscn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607664390482-e17mh33cte3djvkd0f3l21bamllf8iev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeZ5DdQ3Lmt9T-B4j9EpxyCvqhF0DWtFs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,29 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Liste du personnel</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item *ngFor="let user of users">
+			<ion-avatar item-left>
+				<img *ngIf="user.status == 0 && user.type == 'rescuer'" src="assets/img/green_rescuer.png"/>
+				<img *ngIf="user.status == 1 && user.type == 'rescuer'" src="assets/img/orange_rescuer.png"/>
+				<img *ngIf="user.status == 2 && user.type == 'rescuer'" src="assets/img/red_rescuer.png"/>
+				<img *ngIf="user.status == 0 && user.type == 'paramedic'" src="assets/img/green_paramedic.png"/>
+				<img *ngIf="user.status == 1 && user.type == 'paramedic'" src="assets/img/orange_paramedic.png"/>
+				<img *ngIf="user.status == 2 && user.type == 'paramedic'" src="assets/img/red_paramedic.png"/>
+		    </ion-avatar>
+			<h2>{{user.lastName}}</h2>
+			<h3>{{user.firstName}}</h3>
+			<h2 item-right *ngIf="user.officer && user.type == 'rescuer'">Officier Sauveteur</h2>
+			<h2 item-right *ngIf="!user.officer && user.type == 'rescuer'">Sauveteur</h2>
+			<h2 item-right *ngIf="user.officer && user.type == 'paramedic'">Officier SPU</h2>
+			<h2 item-right *ngIf="!user.officer && user.type == 'paramedic'">Sauveteur SPU</h2>
+		</ion-item>
+	</ion-list>
+</ion-content>
